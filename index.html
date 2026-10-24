@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AI IPO forecasts</title>
+  <style>
+    :root { color-scheme: light; }
+    body {
+      margin: 0 auto;
+      max-width: 68rem;
+      padding: 2.5rem 1.25rem 4rem;
+      font: 15px/1.45 ui-sans-serif, system-ui, sans-serif;
+      color: #1c1c1c;
+      background: #fff;
+    }
+    h1 { font-size: 1.6rem; font-weight: 620; letter-spacing: -0.02em; margin: 0 0 0.4rem; }
+    p { margin: 0.4rem 0; }
+    .lede { max-width: 42rem; color: #333; }
+    .meta { color: #666; font-size: 13px; }
+    .wrap { overflow-x: auto; margin-top: 1.4rem; }
+    table { width: 100%; min-width: 54rem; border-collapse: collapse; }
+    th, td { text-align: left; vertical-align: top; padding: 0.85rem 0.9rem 0.95rem 0; border-bottom: 1px solid #e6e6e6; }
+    th { font-size: 12px; font-weight: 640; letter-spacing: 0.04em; text-transform: uppercase; color: #666; }
+    .company { font-weight: 640; }
+    .headline { font-variant-numeric: tabular-nums; font-weight: 650; }
+    .lines { margin: 0.3rem 0 0; padding: 0; list-style: none; color: #444; }
+    .lines li + li { margin-top: 0.2rem; }
+    a { color: inherit; }
+    footer { margin-top: 1.4rem; max-width: 42rem; color: #555; font-size: 13px; }
+    footer a { text-decoration: underline; text-underline-offset: 2px; }
+  </style>
+</head>
+<body>
+  <h1>AI IPO forecasts</h1>
+  <p class="lede">Five large private AI companies. Each number is one venue’s own price or median, for the question printed under it.</p>
+  <p class="meta" id="updated">Loading…</p>
+  <div class="wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>Company</th>
+          <th>Polymarket</th>
+          <th>Kalshi</th>
+          <th>Manifold</th>
+          <th>Metaculus</th>
+        </tr>
+      </thead>
+      <tbody id="rows"></tbody>
+    </table>
+  </div>
+  <footer>
+    <p>Polymarket contracts are “will the IPO happen by this date.” Kalshi contracts are “will the company officially announce an IPO before this date.” Manifold and Metaculus ask the question in the cell. These are not the same event, and this page does not average them.</p>
+    <p>Prices refresh every six hours from the public Polymarket, Kalshi, and Manifold APIs, and from Metaculus question pages. <a href="data.json">data.json</a></p>
+  </footer>
+  <script>
+    const rows = document.querySelector("#rows");
+    const updated = document.querySelector("#updated");
+
+    function text(value) {
+      return document.createTextNode(value);
+    }
+
+    function cell(venue) {
+      const td = document.createElement("td");
+      const strong = document.createElement("div");
+      strong.className = "headline";
+      const link = document.createElement("a");
+      link.href = venue.href;
+      link.textContent = venue.headline;
+      strong.append(link);
+      const list = document.createElement("ul");
+      list.className = "lines";
+      for (const line of venue.lines || []) {
+        const li = document.createElement("li");
+        li.append(text(line));
+        list.append(li);
+      }
+      td.append(strong, list);
+      return td;
+    }
+
+    fetch("data.json")
+      .then((res) => {
+        if (!res.ok) throw new Error(res.status);
+        return res.json();
+      })
+      .then((data) => {
+        const when = new Date(data.updated);
+        updated.textContent = "Updated " + when.toLocaleString(undefined, { dateStyle: "medium", timeStyle: "short", timeZone: "UTC" }) + " UTC";
+        for (const company of data.companies) {
+          const tr = document.createElement("tr");
+          const name = document.createElement("td");
+          name.className = "company";
+          name.append(text(company.name));
+          tr.append(name);
+          for (const venue of company.venues) tr.append(cell(venue));
+          rows.append(tr);
+        }
+      })
+      .catch((err) => {
+        updated.textContent = "Could not load forecasts (" + err.message + ").";
+      });
+  </script>
+</body>
+</html>
