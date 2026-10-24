@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-24T12:33:32Z",
+  "updated": "2026-10-24T18:29:20Z",
   "companies": [
     {
       "id": "openai",
@@ -9,13 +9,13 @@
           "headline": "39.5% by Jun 30, 2027",
           "lines": [
             "Will OpenAI IPO by June 30, 2027?",
-            "3.2% by Dec 31, 2026"
+            "3.6% by Dec 31, 2026"
           ],
           "href": "https://polymarket.com/event/openai-ipo-by",
           "name": "Polymarket"
         },
         {
-          "headline": "55.0% before Jun 1, 2027",
+          "headline": "55.5% before Jun 1, 2027",
           "lines": [
             "Chance the company has officially announced an IPO before that date.",
             "Before Jun 1, 2027",
@@ -35,10 +35,10 @@
         },
         {
           "name": "Metaculus",
-          "headline": "Jun 9, 2027",
+          "headline": "Jun 7, 2027",
           "lines": [
             "When will OpenAI IPO?",
-            "Community median. 50% interval Mar 24, 2027 \u2013 Oct 7, 2027. 15 forecasters in the latest aggregate."
+            "Community median. 50% interval Mar 23, 2027 \u2013 Oct 1, 2027. 15 forecasters in the latest aggregate."
           ],
           "href": "https://www.metaculus.com/questions/44766/when-will-openai-ipo"
         }
@@ -49,20 +49,20 @@
       "name": "Anthropic",
       "venues": [
         {
-          "headline": "52.5% by Nov 25, 2026",
+          "headline": "54.5% by Nov 25, 2026",
           "lines": [
             "Will Anthropic IPO by November 25, 2026?",
-            "78.5% by Dec 31, 2026"
+            "76.5% by Dec 31, 2026"
           ],
           "href": "https://polymarket.com/event/anthropic-ipo-by",
           "name": "Polymarket"
         },
         {
-          "headline": "59.0% before Dec 1, 2026",
+          "headline": "70.5% before Dec 1, 2026",
           "lines": [
             "Chance the company has officially announced an IPO before that date.",
             "Before Dec 1, 2026",
-            "83.0% before Jan 1, 2027"
+            "82.5% before Jan 1, 2027"
           ],
           "href": "https://kalshi.com/markets/kxipoanthropic",
           "name": "Kalshi"
@@ -81,7 +81,7 @@
           "headline": "Dec 4, 2026",
           "lines": [
             "When will Anthropic IPO?",
-            "Community median. 50% interval Nov 20, 2026 \u2013 Jan 3, 2027. 21 forecasters in the latest aggregate."
+            "Community median. 50% interval Nov 20, 2026 \u2013 Jan 5, 2027. 21 forecasters in the latest aggregate."
           ],
           "href": "https://www.metaculus.com/questions/44767/when-will-anthropic-ipo"
         }
@@ -134,7 +134,7 @@
           "headline": "No clean price",
           "lines": [
             "Will Databricks not IPO by December 31, 2027?",
-            "The buckets on this event sum to 3.97, so the printed yes-price is not a usable probability."
+            "The buckets on this event sum to 3.96, so the printed yes-price is not a usable probability."
           ],
           "href": "https://polymarket.com/event/databricks-ipo-closing-market-cap-20260630152322605"
         },
