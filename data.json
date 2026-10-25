@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-25T01:01:32Z",
+  "updated": "2026-10-25T06:38:20Z",
   "companies": [
     {
       "id": "openai",
@@ -9,7 +9,7 @@
           "headline": "39.5% by Jun 30, 2027",
           "lines": [
             "Will OpenAI IPO by June 30, 2027?",
-            "3.5% by Dec 31, 2026"
+            "3.6% by Dec 31, 2026"
           ],
           "href": "https://polymarket.com/event/openai-ipo-by",
           "name": "Polymarket"
@@ -19,7 +19,7 @@
           "lines": [
             "Chance the company has officially announced an IPO before that date.",
             "Before Jun 1, 2027",
-            "4.5% before Jan 1, 2027"
+            "5.0% before Jan 1, 2027"
           ],
           "href": "https://kalshi.com/markets/kxipoopenai",
           "name": "Kalshi"
@@ -35,12 +35,11 @@
         },
         {
           "name": "Metaculus",
-          "headline": "Jun 7, 2027",
+          "headline": "No open market",
           "lines": [
-            "When will OpenAI IPO?",
-            "Community median. 50% interval Mar 23, 2027 \u2013 Oct 1, 2027. 15 forecasters in the latest aggregate."
+            "No open question asking when this company IPOs."
           ],
-          "href": "https://www.metaculus.com/questions/44766/when-will-openai-ipo"
+          "href": "https://www.metaculus.com/questions/?search=OpenAI%20IPO"
         }
       ]
     },
@@ -49,20 +48,20 @@
       "name": "Anthropic",
       "venues": [
         {
-          "headline": "56.0% by Nov 25, 2026",
+          "headline": "55.5% by Nov 25, 2026",
           "lines": [
             "Will Anthropic IPO by November 25, 2026?",
-            "77.5% by Dec 31, 2026"
+            "76.5% by Dec 31, 2026"
           ],
           "href": "https://polymarket.com/event/anthropic-ipo-by",
           "name": "Polymarket"
         },
         {
-          "headline": "72.0% before Dec 1, 2026",
+          "headline": "67.0% before Dec 1, 2026",
           "lines": [
             "Chance the company has officially announced an IPO before that date.",
             "Before Dec 1, 2026",
-            "80.5% before Jan 1, 2027"
+            "78.5% before Jan 1, 2027"
           ],
           "href": "https://kalshi.com/markets/kxipoanthropic",
           "name": "Kalshi"
@@ -78,12 +77,11 @@
         },
         {
           "name": "Metaculus",
-          "headline": "Dec 4, 2026",
+          "headline": "No open market",
           "lines": [
-            "When will Anthropic IPO?",
-            "Community median. 50% interval Nov 20, 2026 \u2013 Jan 4, 2027. 20 forecasters in the latest aggregate."
+            "No open question asking when this company IPOs."
           ],
-          "href": "https://www.metaculus.com/questions/44767/when-will-anthropic-ipo"
+          "href": "https://www.metaculus.com/questions/?search=Anthropic%20IPO"
         }
       ]
     },
@@ -170,7 +168,7 @@
       "venues": [
         {
           "name": "Polymarket",
-          "headline": "37.0% by Dec 31, 2027",
+          "headline": "39.0% by Dec 31, 2027",
           "lines": [
             "Will Perplexity not IPO by December 31, 2027?",
             "Taken from the complement of that bucket. The event's buckets sum to about 1."
@@ -178,7 +176,7 @@
           "href": "https://polymarket.com/event/perplexity-ipo-closing-market-cap"
         },
         {
-          "headline": "58.5% before Jan 1, 2029",
+          "headline": "58.0% before Jan 1, 2029",
           "lines": [
             "Chance the company has officially announced an IPO before that date.",
             "Before Jan 1, 2029"
@@ -204,5 +202,11 @@
         }
       ]
     }
+  ],
+  "metaculus_errors": [
+    "HTTP Error 403: Forbidden",
+    "HTTP Error 403: Forbidden",
+    "HTTP Error 403: Forbidden",
+    "HTTP Error 403: Forbidden"
   ]
 }
