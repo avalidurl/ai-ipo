@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-26T01:00:38Z",
+  "updated": "2026-10-26T06:54:30Z",
   "companies": [
     {
       "id": "openai",
@@ -9,7 +9,7 @@
           "headline": "40.5% by Jun 30, 2027",
           "lines": [
             "Will OpenAI IPO by June 30, 2027?",
-            "3.3% by Dec 31, 2026"
+            "3.5% by Dec 31, 2026"
           ],
           "href": "https://polymarket.com/event/openai-ipo-by",
           "name": "Polymarket"
@@ -48,16 +48,16 @@
       "name": "Anthropic",
       "venues": [
         {
-          "headline": "50.0% by Nov 25, 2026",
+          "headline": "52.5% by Nov 25, 2026",
           "lines": [
             "Will Anthropic IPO by November 25, 2026?",
-            "82.5% by Dec 31, 2026"
+            "82.0% by Dec 31, 2026"
           ],
           "href": "https://polymarket.com/event/anthropic-ipo-by",
           "name": "Polymarket"
         },
         {
-          "headline": "74.5% before Dec 1, 2026",
+          "headline": "72.5% before Dec 1, 2026",
           "lines": [
             "Chance the company has officially announced an IPO before that date.",
             "Before Dec 1, 2026",
@@ -168,7 +168,7 @@
       "venues": [
         {
           "name": "Polymarket",
-          "headline": "39.0% by Dec 31, 2027",
+          "headline": "33.0% by Dec 31, 2027",
           "lines": [
             "Will Perplexity not IPO by December 31, 2027?",
             "Taken from the complement of that bucket. The event's buckets sum to about 1."
