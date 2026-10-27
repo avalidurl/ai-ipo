@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-27T00:59:34Z",
+  "updated": "2026-10-27T06:43:43Z",
   "companies": [
     {
       "id": "openai",
@@ -15,11 +15,11 @@
           "name": "Polymarket"
         },
         {
-          "headline": "55.5% before Jun 1, 2027",
+          "headline": "55.0% before Jun 1, 2027",
           "lines": [
             "Chance the company has officially announced an IPO before that date.",
             "Before Jun 1, 2027",
-            "5.0% before Jan 1, 2027"
+            "4.5% before Jan 1, 2027"
           ],
           "href": "https://kalshi.com/markets/kxipoopenai",
           "name": "Kalshi"
@@ -48,9 +48,9 @@
       "name": "Anthropic",
       "venues": [
         {
-          "headline": "53.0% by Nov 19, 2026",
+          "headline": "66.0% by Nov 20, 2026",
           "lines": [
-            "Will Anthropic IPO by November 19, 2026?",
+            "Will Anthropic IPO by November 20, 2026?",
             "93.5% by Dec 31, 2026"
           ],
           "href": "https://polymarket.com/event/anthropic-ipo-by",
@@ -61,7 +61,7 @@
           "lines": [
             "Chance the company has officially announced an IPO before that date.",
             "Before Dec 1, 2026",
-            "94.5% before Jan 1, 2027"
+            "92.5% before Jan 1, 2027"
           ],
           "href": "https://kalshi.com/markets/kxipoanthropic",
           "name": "Kalshi"
@@ -71,7 +71,7 @@
           "headline": "2026 Q4",
           "lines": [
             "When will Anthropic IPO?",
-            "93.9% of the probability sits on 2026 Q4."
+            "93.2% of the probability sits on 2026 Q4."
           ],
           "href": "https://manifold.markets/JonasVollmer/when-will-anthropic-ipo"
         },
@@ -168,7 +168,7 @@
       "venues": [
         {
           "name": "Polymarket",
-          "headline": "34.0% by Dec 31, 2027",
+          "headline": "34.5% by Dec 31, 2027",
           "lines": [
             "Will Perplexity not IPO by December 31, 2027?",
             "Taken from the complement of that bucket. The event's buckets sum to about 1."
