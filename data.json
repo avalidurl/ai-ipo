@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-28T06:32:11Z",
+  "updated": "2026-10-28T12:29:25Z",
   "companies": [
     {
       "id": "openai",
@@ -48,16 +48,16 @@
       "name": "Anthropic",
       "venues": [
         {
-          "headline": "65.0% by Nov 20, 2026",
+          "headline": "66.0% by Nov 20, 2026",
           "lines": [
             "Will Anthropic IPO by November 20, 2026?",
-            "95.5% by Dec 31, 2026"
+            "95.2% by Dec 31, 2026"
           ],
           "href": "https://polymarket.com/event/anthropic-ipo-by",
           "name": "Polymarket"
         },
         {
-          "headline": "89.5% before Dec 1, 2026",
+          "headline": "88.0% before Dec 1, 2026",
           "lines": [
             "Chance the company has officially announced an IPO before that date.",
             "Before Dec 1, 2026",
@@ -132,7 +132,7 @@
           "headline": "No clean price",
           "lines": [
             "Will Databricks not IPO by December 31, 2027?",
-            "The buckets on this event sum to 3.95, so the printed yes-price is not a usable probability."
+            "The buckets on this event sum to 3.96, so the printed yes-price is not a usable probability."
           ],
           "href": "https://polymarket.com/event/databricks-ipo-closing-market-cap-20260630152322605"
         },
@@ -168,7 +168,7 @@
       "venues": [
         {
           "name": "Polymarket",
-          "headline": "33.0% by Dec 31, 2027",
+          "headline": "35.0% by Dec 31, 2027",
           "lines": [
             "Will Perplexity not IPO by December 31, 2027?",
             "Taken from the complement of that bucket. The event's buckets sum to about 1."
@@ -176,7 +176,7 @@
           "href": "https://polymarket.com/event/perplexity-ipo-closing-market-cap"
         },
         {
-          "headline": "57.5% before Jan 1, 2029",
+          "headline": "58.0% before Jan 1, 2029",
           "lines": [
             "Chance the company has officially announced an IPO before that date.",
             "Before Jan 1, 2029"
