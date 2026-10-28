@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-27T18:24:00Z",
+  "updated": "2026-10-28T00:46:04Z",
   "companies": [
     {
       "id": "openai",
@@ -9,7 +9,7 @@
           "headline": "40.5% by Jun 30, 2027",
           "lines": [
             "Will OpenAI IPO by June 30, 2027?",
-            "3.5% by Dec 31, 2026"
+            "3.6% by Dec 31, 2026"
           ],
           "href": "https://polymarket.com/event/openai-ipo-by",
           "name": "Polymarket"
@@ -19,7 +19,7 @@
           "lines": [
             "Chance the company has officially announced an IPO before that date.",
             "Before Jun 1, 2027",
-            "4.0% before Jan 1, 2027"
+            "9.0% before Jan 1, 2027"
           ],
           "href": "https://kalshi.com/markets/kxipoopenai",
           "name": "Kalshi"
@@ -168,7 +168,7 @@
       "venues": [
         {
           "name": "Polymarket",
-          "headline": "33.0% by Dec 31, 2027",
+          "headline": "33.5% by Dec 31, 2027",
           "lines": [
             "Will Perplexity not IPO by December 31, 2027?",
             "Taken from the complement of that bucket. The event's buckets sum to about 1."
@@ -176,7 +176,7 @@
           "href": "https://polymarket.com/event/perplexity-ipo-closing-market-cap"
         },
         {
-          "headline": "58.5% before Jan 1, 2029",
+          "headline": "58.0% before Jan 1, 2029",
           "lines": [
             "Chance the company has officially announced an IPO before that date.",
             "Before Jan 1, 2029"
