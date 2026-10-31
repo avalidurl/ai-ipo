@@ -1,21 +1,21 @@
 {
-  "updated": "2026-10-31T00:38:13Z",
+  "updated": "2026-10-31T06:24:48Z",
   "companies": [
     {
       "id": "openai",
       "name": "OpenAI",
       "venues": [
         {
-          "headline": "44.5% by Jun 30, 2027",
+          "headline": "44.0% by Jun 30, 2027",
           "lines": [
             "Will OpenAI IPO by June 30, 2027?",
-            "3.9% by Dec 31, 2026"
+            "3.1% by Dec 31, 2026"
           ],
           "href": "https://polymarket.com/event/openai-ipo-by",
           "name": "Polymarket"
         },
         {
-          "headline": "51.5% before Jun 1, 2027",
+          "headline": "52.0% before Jun 1, 2027",
           "lines": [
             "Chance the company has officially announced an IPO before that date.",
             "Before Jun 1, 2027",
@@ -48,7 +48,7 @@
       "name": "Anthropic",
       "venues": [
         {
-          "headline": "53.0% by Nov 20, 2026",
+          "headline": "52.5% by Nov 20, 2026",
           "lines": [
             "Will Anthropic IPO by November 20, 2026?",
             "90.0% by Dec 31, 2026"
@@ -57,11 +57,11 @@
           "name": "Polymarket"
         },
         {
-          "headline": "84.5% before Dec 1, 2026",
+          "headline": "78.5% before Dec 1, 2026",
           "lines": [
             "Chance the company has officially announced an IPO before that date.",
             "Before Dec 1, 2026",
-            "90.5% before Jan 1, 2027"
+            "89.5% before Jan 1, 2027"
           ],
           "href": "https://kalshi.com/markets/kxipoanthropic",
           "name": "Kalshi"
@@ -71,7 +71,7 @@
           "headline": "2026 Q4",
           "lines": [
             "When will Anthropic IPO?",
-            "92.6% of the probability sits on 2026 Q4."
+            "92.5% of the probability sits on 2026 Q4."
           ],
           "href": "https://manifold.markets/JonasVollmer/when-will-anthropic-ipo"
         },
@@ -132,7 +132,7 @@
           "headline": "No clean price",
           "lines": [
             "Will Databricks not IPO by December 31, 2027?",
-            "The buckets on this event sum to 3.29, so the printed yes-price is not a usable probability."
+            "The buckets on this event sum to 2.52, so the printed yes-price is not a usable probability."
           ],
           "href": "https://polymarket.com/event/databricks-ipo-closing-market-cap-20260630152322605"
         },
@@ -168,10 +168,10 @@
       "venues": [
         {
           "name": "Polymarket",
-          "headline": "No clean price",
+          "headline": "35.0% by Dec 31, 2027",
           "lines": [
             "Will Perplexity not IPO by December 31, 2027?",
-            "The buckets on this event sum to 1.18, so the printed yes-price is not a usable probability."
+            "Taken from the complement of that bucket. The event's buckets sum to about 1."
           ],
           "href": "https://polymarket.com/event/perplexity-ipo-closing-market-cap"
         },
