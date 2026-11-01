@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-01T06:27:00Z",
+  "updated": "2026-11-01T12:22:52Z",
   "companies": [
     {
       "id": "openai",
@@ -15,7 +15,7 @@
           "name": "Polymarket"
         },
         {
-          "headline": "52.5% before Jun 1, 2027",
+          "headline": "52.0% before Jun 1, 2027",
           "lines": [
             "Chance the company has officially announced an IPO before that date.",
             "Before Jun 1, 2027",
@@ -48,16 +48,16 @@
       "name": "Anthropic",
       "venues": [
         {
-          "headline": "57.5% by Nov 20, 2026",
+          "headline": "60.5% by Nov 20, 2026",
           "lines": [
             "Will Anthropic IPO by November 20, 2026?",
-            "87.9% by Dec 31, 2026"
+            "88.4% by Dec 31, 2026"
           ],
           "href": "https://polymarket.com/event/anthropic-ipo-by",
           "name": "Polymarket"
         },
         {
-          "headline": "82.5% before Dec 1, 2026",
+          "headline": "83.0% before Dec 1, 2026",
           "lines": [
             "Chance the company has officially announced an IPO before that date.",
             "Before Dec 1, 2026",
@@ -132,7 +132,7 @@
           "headline": "No clean price",
           "lines": [
             "Will Databricks not IPO by December 31, 2027?",
-            "The buckets on this event sum to 2.98, so the printed yes-price is not a usable probability."
+            "The buckets on this event sum to 3.48, so the printed yes-price is not a usable probability."
           ],
           "href": "https://polymarket.com/event/databricks-ipo-closing-market-cap-20260630152322605"
         },
