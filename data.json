@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-05T18:23:19Z",
+  "updated": "2026-11-06T00:38:26Z",
   "companies": [
     {
       "id": "openai",
@@ -48,20 +48,19 @@
       "name": "Anthropic",
       "venues": [
         {
-          "headline": "51.0% by Nov 24, 2026",
+          "headline": "53.5% by Nov 25, 2026",
           "lines": [
-            "Will Anthropic IPO by November 24, 2026?",
+            "Will Anthropic IPO by November 25, 2026?",
             "72.5% by Dec 31, 2026"
           ],
           "href": "https://polymarket.com/event/anthropic-ipo-by",
           "name": "Polymarket"
         },
         {
-          "headline": "61.5% before Dec 1, 2026",
+          "headline": "65.5% before Jan 1, 2027",
           "lines": [
             "Chance the company has officially announced an IPO before that date.",
-            "Before Dec 1, 2026",
-            "74.5% before Jan 1, 2027"
+            "Before Jan 1, 2027"
           ],
           "href": "https://kalshi.com/markets/kxipoanthropic",
           "name": "Kalshi"
@@ -71,7 +70,7 @@
           "headline": "2026 Q4",
           "lines": [
             "When will Anthropic IPO?",
-            "88.0% of the probability sits on 2026 Q4."
+            "72.5% of the probability sits on 2026 Q4."
           ],
           "href": "https://manifold.markets/JonasVollmer/when-will-anthropic-ipo"
         },
@@ -132,7 +131,7 @@
           "headline": "No clean price",
           "lines": [
             "Will Databricks not IPO by December 31, 2027?",
-            "The buckets on this event sum to 2.92, so the printed yes-price is not a usable probability."
+            "The buckets on this event sum to 3.20, so the printed yes-price is not a usable probability."
           ],
           "href": "https://polymarket.com/event/databricks-ipo-closing-market-cap-20260630152322605"
         },
@@ -171,7 +170,7 @@
           "headline": "No clean price",
           "lines": [
             "Will Perplexity not IPO by December 31, 2027?",
-            "The buckets on this event sum to 0.79, so the printed yes-price is not a usable probability."
+            "The buckets on this event sum to 0.89, so the printed yes-price is not a usable probability."
           ],
           "href": "https://polymarket.com/event/perplexity-ipo-closing-market-cap"
         },
