@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-09T12:25:43Z",
+  "updated": "2026-11-09T18:22:07Z",
   "companies": [
     {
       "id": "openai",
@@ -48,7 +48,7 @@
       "name": "Anthropic",
       "venues": [
         {
-          "headline": "68.0% by Nov 20, 2026",
+          "headline": "59.0% by Nov 20, 2026",
           "lines": [
             "Will Anthropic IPO by November 20, 2026?",
             "87.2% by Dec 31, 2026"
@@ -57,11 +57,11 @@
           "name": "Polymarket"
         },
         {
-          "headline": "76.5% before Dec 1, 2026",
+          "headline": "79.5% before Dec 1, 2026",
           "lines": [
             "Chance the company has officially announced an IPO before that date.",
             "Before Dec 1, 2026",
-            "88.5% before Jan 1, 2027"
+            "87.5% before Jan 1, 2027"
           ],
           "href": "https://kalshi.com/markets/kxipoanthropic",
           "name": "Kalshi"
@@ -168,7 +168,7 @@
       "venues": [
         {
           "name": "Polymarket",
-          "headline": "54.5% by Dec 31, 2027",
+          "headline": "55.0% by Dec 31, 2027",
           "lines": [
             "Will Perplexity not IPO by December 31, 2027?",
             "Taken from the complement of that bucket. The event's buckets sum to about 1."
