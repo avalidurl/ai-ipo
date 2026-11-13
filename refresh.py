@@ -2,8 +2,9 @@
 """Pull IPO forecasts for five private AI companies and write data.json.
 
 Venues ask different questions. This script does not blend them.
-Polymarket and Manifold have open CORS; Kalshi and Metaculus do not,
+Polymarket and Manifold have open CORS; Kalshi does not,
 so the page reads this file instead of calling them from the browser.
+Metaculus was dropped: its official API requires an account token.
 """
 
 import json
@@ -13,7 +14,7 @@ import urllib.request
 from datetime import datetime, timezone
 
 OUT = "data.json"
-UA = "Mozilla/5.0 (compatible; ai-ipo-forecasts/1.0)"
+UA = "ai-ipo-forecasts/1.0 (+https://github.com/avalidurl/ai-ipo; https://gokhanturhan.com/ai-ipo/)"
 
 COMPANIES = [
     {
@@ -22,7 +23,6 @@ COMPANIES = [
         "poly_event": "openai-ipo-by",
         "kalshi_series": "KXIPOOPENAI",
         "manifold_id": "plzUIl06Oc",
-        "metaculus_title": "When will OpenAI IPO?",
     },
     {
         "id": "anthropic",
@@ -30,7 +30,6 @@ COMPANIES = [
         "poly_event": "anthropic-ipo-by",
         "kalshi_series": "KXIPOANTHROPIC",
         "manifold_id": "0Ityc29NlO",
-        "metaculus_title": "When will Anthropic IPO?",
     },
     {
         "id": "xai",
@@ -39,7 +38,6 @@ COMPANIES = [
         "poly_search": "xAI IPO",
         "kalshi_series": "KXIPOXAI",
         "manifold_id": None,
-        "metaculus_title": None,
     },
     {
         "id": "databricks",
@@ -47,7 +45,6 @@ COMPANIES = [
         "poly_event": "databricks-ipo-closing-market-cap-20260630152322605",
         "kalshi_series": "KXIPODATABRICKS",
         "manifold_id": "u2qut2EPP5",
-        "metaculus_title": None,
     },
     {
         "id": "perplexity",
@@ -55,15 +52,7 @@ COMPANIES = [
         "poly_event": "perplexity-ipo-closing-market-cap",
         "kalshi_series": "KXIPOPERPLEXITY",
         "manifold_id": None,
-        "metaculus_title": None,
     },
-]
-
-META_SEARCHES = [
-    "https://www.metaculus.com/questions/?search=Databricks%20public%20offering&statuses=open",
-    "https://www.metaculus.com/questions/?search=xAI%20IPO&statuses=open",
-    "https://www.metaculus.com/questions/?search=Perplexity%20IPO&statuses=open",
-    "https://www.metaculus.com/questions/?search=Databricks%20IPO&statuses=open",
 ]
 
 MONTHS = {
@@ -305,102 +294,6 @@ def manifold(company):
     return cell("Manifold", pct(max(p for _, p in buckets)), [question], href)
 
 
-def metaculus_questions(pages):
-    found = []
-    title_re = re.compile(r'\\"title\\":\\"([^\\"]{8,220})\\"')
-    for html in pages:
-        for match in title_re.finditer(html):
-            title = match.group(1)
-            window = html[match.start(): match.start() + 160000]
-            latest = re.search(
-                r'\\"latest\\":\{\\"start_time\\":[^,]+,\\"end_time\\":[^,]+,\\"forecaster_count\\":(\d+),\\"interval_lower_bounds\\":\[([0-9.eE+-]+)\],\\"centers\\":\[([0-9.eE+-]+)\],\\"interval_upper_bounds\\":\[([0-9.eE+-]+)\]',
-                window,
-            )
-            if not latest:
-                continue
-            scaling = re.search(
-                r'\\"scaling\\":\{\\"range_min\\":(\d+|null),\\"range_max\\":(\d+|null)',
-                window,
-            )
-            slug = re.search(r'\\"slug\\":\\"([^\\"]+)\\"', window)
-            post = re.search(r'\\"post_id\\":(\d+)', window)
-            status = re.search(r'\\"status\\":\\"(open|closed|resolved)\\"', window)
-            if status and status.group(1) != "open":
-                continue
-            found.append({
-                "title": title,
-                "count": int(latest.group(1)),
-                "low": float(latest.group(2)),
-                "center": float(latest.group(3)),
-                "high": float(latest.group(4)),
-                "range_min": None if not scaling or scaling.group(1) == "null" else int(scaling.group(1)),
-                "range_max": None if not scaling or scaling.group(2) == "null" else int(scaling.group(2)),
-                "slug": slug.group(1) if slug else "",
-                "post_id": post.group(1) if post else None,
-            })
-    return found
-
-
-def scale_date(fraction, question):
-    start, end = question["range_min"], question["range_max"]
-    if start is None or end is None:
-        return None
-    stamp = start + fraction * (end - start)
-    return datetime.fromtimestamp(stamp, timezone.utc)
-
-
-def metaculus_cell(company, questions):
-    href = "https://www.metaculus.com/questions/?search=" + urllib.parse.quote(company["name"] + " IPO")
-    title = company.get("metaculus_title")
-    matches = []
-    if title:
-        matches = [q for q in questions if q["title"] == title]
-    else:
-        name = company["name"].lower()
-        for question in questions:
-            text = question["title"].lower()
-            if name in text and "ipo" in text and "openai" not in text and "anthropic" not in text:
-                matches.append(question)
-    if not matches:
-        return empty("Metaculus", href, "No open question asking when this company IPOs.")
-    question = matches[0]
-    if question["post_id"]:
-        slug = question["slug"]
-        href = f"https://www.metaculus.com/questions/{question['post_id']}/{slug}" if slug else f"https://www.metaculus.com/questions/{question['post_id']}/"
-    if question["range_min"] and question["range_max"]:
-        mid = scale_date(question["center"], question)
-        low = scale_date(question["low"], question)
-        high = scale_date(question["high"], question)
-        if not mid:
-            return failed("Metaculus", href, "Date question had no usable range.")
-        return cell(
-            "Metaculus",
-            fmt_date(mid),
-            [
-                question["title"],
-                f"Community median. 50% interval {fmt_date(low)} – {fmt_date(high)}. {question['count']} forecasters in the latest aggregate.",
-            ],
-            href,
-        )
-    return cell(
-        "Metaculus",
-        pct(question["center"]),
-        [question["title"], f"{question['count']} forecasters in the latest aggregate."],
-        href,
-    )
-
-
-def load_metaculus():
-    pages = []
-    errors = []
-    for url in META_SEARCHES:
-        try:
-            pages.append(get(url, accept="text/html"))
-        except Exception as exc:
-            errors.append(str(exc))
-    return metaculus_questions(pages), errors
-
-
 def safe(name, href, fn):
     try:
         return fn()
@@ -409,22 +302,18 @@ def safe(name, href, fn):
 
 
 def main():
-    questions, meta_errors = load_metaculus()
     companies = []
     for company in COMPANIES:
         venues = [
             safe("Polymarket", "https://polymarket.com", lambda c=company: polymarket(c)),
             safe("Kalshi", "https://kalshi.com", lambda c=company: kalshi(c)),
             safe("Manifold", "https://manifold.markets", lambda c=company: manifold(c)),
-            safe("Metaculus", "https://www.metaculus.com", lambda c=company: metaculus_cell(c, questions)),
         ]
         companies.append({"id": company["id"], "name": company["name"], "venues": venues})
     payload = {
         "updated": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
         "companies": companies,
     }
-    if meta_errors:
-        payload["metaculus_errors"] = meta_errors
     with open(OUT, "w", encoding="utf-8") as fh:
         json.dump(payload, fh, indent=2)
         fh.write("\n")

@@ -43,15 +43,14 @@
           <th>Polymarket</th>
           <th>Kalshi</th>
           <th>Manifold</th>
-          <th>Metaculus</th>
         </tr>
       </thead>
       <tbody id="rows"></tbody>
     </table>
   </div>
   <footer>
-    <p>Polymarket contracts are “will the IPO happen by this date.” Kalshi contracts are “will the company officially announce an IPO before this date.” Manifold and Metaculus ask the question in the cell. These are not the same event, and this page does not average them.</p>
-    <p>Prices refresh every six hours from the public Polymarket, Kalshi, and Manifold APIs, and from Metaculus question pages. <a href="data.json">data.json</a></p>
+    <p>Polymarket contracts are “will the IPO happen by this date.” Kalshi contracts are “will the company officially announce an IPO before this date.” Manifold asks the question in the cell. These are not the same event, and this page does not average them.</p>
+    <p>Prices refresh once a day from the public Polymarket, Kalshi, and Manifold APIs. <a href="data.json">data.json</a></p>
   </footer>
   <script>
     const rows = document.querySelector("#rows");
