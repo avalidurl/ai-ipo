@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-13T06:28:16Z",
+  "updated": "2026-11-13T12:25:08Z",
   "companies": [
     {
       "id": "openai",
@@ -9,7 +9,7 @@
           "headline": "45.5% by Jun 30, 2027",
           "lines": [
             "Will OpenAI IPO by June 30, 2027?",
-            "1.4% by Dec 31, 2026"
+            "1.3% by Dec 31, 2026"
           ],
           "href": "https://polymarket.com/event/openai-ipo-by",
           "name": "Polymarket"
@@ -48,16 +48,16 @@
       "name": "Anthropic",
       "venues": [
         {
-          "headline": "96.4% by Nov 19, 2026",
+          "headline": "95.0% by Nov 19, 2026",
           "lines": [
             "Will Anthropic IPO by November 19, 2026?",
-            "98.7% by Dec 31, 2026"
+            "97.9% by Dec 31, 2026"
           ],
           "href": "https://polymarket.com/event/anthropic-ipo-by",
           "name": "Polymarket"
         },
         {
-          "headline": "97.5% before Nov 20, 2026",
+          "headline": "95.5% before Nov 20, 2026",
           "lines": [
             "Chance the company has officially announced an IPO before that date.",
             "Before Nov 20, 2026",
@@ -132,7 +132,7 @@
           "headline": "No clean price",
           "lines": [
             "Will Databricks not IPO by December 31, 2027?",
-            "The buckets on this event sum to 2.78, so the printed yes-price is not a usable probability."
+            "The buckets on this event sum to 3.24, so the printed yes-price is not a usable probability."
           ],
           "href": "https://polymarket.com/event/databricks-ipo-closing-market-cap-20260630152322605"
         },
@@ -171,7 +171,7 @@
           "headline": "No clean price",
           "lines": [
             "Will Perplexity not IPO by December 31, 2027?",
-            "The buckets on this event sum to 0.82, so the printed yes-price is not a usable probability."
+            "The buckets on this event sum to 0.87, so the printed yes-price is not a usable probability."
           ],
           "href": "https://polymarket.com/event/perplexity-ipo-closing-market-cap"
         },
