@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-13T00:39:32Z",
+  "updated": "2026-11-13T06:28:16Z",
   "companies": [
     {
       "id": "openai",
@@ -15,7 +15,7 @@
           "name": "Polymarket"
         },
         {
-          "headline": "46.5% before Jun 1, 2027",
+          "headline": "43.0% before Jun 1, 2027",
           "lines": [
             "Chance the company has officially announced an IPO before that date.",
             "Before Jun 1, 2027",
@@ -61,7 +61,7 @@
           "lines": [
             "Chance the company has officially announced an IPO before that date.",
             "Before Nov 20, 2026",
-            "97.5% before Jan 1, 2027"
+            "98.5% before Jan 1, 2027"
           ],
           "href": "https://kalshi.com/markets/kxipoanthropic",
           "name": "Kalshi"
@@ -132,7 +132,7 @@
           "headline": "No clean price",
           "lines": [
             "Will Databricks not IPO by December 31, 2027?",
-            "The buckets on this event sum to 3.20, so the printed yes-price is not a usable probability."
+            "The buckets on this event sum to 2.78, so the printed yes-price is not a usable probability."
           ],
           "href": "https://polymarket.com/event/databricks-ipo-closing-market-cap-20260630152322605"
         },
@@ -176,7 +176,7 @@
           "href": "https://polymarket.com/event/perplexity-ipo-closing-market-cap"
         },
         {
-          "headline": "57.5% before Jan 1, 2029",
+          "headline": "58.0% before Jan 1, 2029",
           "lines": [
             "Chance the company has officially announced an IPO before that date.",
             "Before Jan 1, 2029"
